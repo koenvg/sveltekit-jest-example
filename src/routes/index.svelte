@@ -1,5 +1,6 @@
 <script lang="ts">
-	export let name: string;
+	import { getName } from '$/api'
+	let name: string = getName();
 </script>
 
 <h1>Welcome to SvelteKit {name}</h1>

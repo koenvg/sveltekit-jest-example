@@ -11,11 +11,7 @@ module.exports = {
 	},
 	moduleFileExtensions: ['js', 'ts', 'svelte'],
 	moduleNameMapper: {
-		'^\\$lib(.*)$': '<rootDir>/src/lib$1',
-		'^\\$app(.*)$': [
-			'<rootDir>/.svelte-kit/dev/runtime/app$1',
-			'<rootDir>/.svelte-kit/build/runtime/app$1'
-		]
+		'^\\$(.*)$': '<rootDir>/src$1',
 	},
 	setupFilesAfterEnv: ['<rootDir>/jest-setup.ts']
 };

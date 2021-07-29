@@ -1,4 +1,5 @@
 import preprocess from 'svelte-preprocess';
+import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 export default {
@@ -8,6 +9,13 @@ export default {
 
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		target: '#svelte',
+		vite: {
+			resolve: {
+				alias: {
+					$: path.resolve('./src/')
+				}
+			}
+		}
 	}
 };

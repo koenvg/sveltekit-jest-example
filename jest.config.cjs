@@ -10,8 +10,7 @@ module.exports = {
 				preprocess: './svelte.config.test.cjs'
 			}
 		],
-		'^.+\\.ts$': 'ts-jest',
-		'^.+\\.js$': 'ts-jest'
+		'^.+\\.(ts|js)$': 'ts-jest'
 	},
 	moduleFileExtensions: ['js', 'ts', 'svelte'],
 	setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],

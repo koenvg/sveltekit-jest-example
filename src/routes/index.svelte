@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getName } from '$/api'
-	let name: string = import.meta.env.VITE_MESSAGE;
+	let name: string = getName();
 </script>
 
 <h1>Welcome to SvelteKit {name}</h1>

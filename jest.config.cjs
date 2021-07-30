@@ -1,6 +1,5 @@
 const { pathsToModuleNameMapper } = require('ts-jest/utils');
 const { compilerOptions } = require('./tsconfig.json');
-const sveltePreprocess = require("svelte-preprocess");
 
 module.exports = {
 	transform: {
@@ -10,7 +9,9 @@ module.exports = {
 				preprocess: './svelte.config.test.cjs'
 			}
 		],
-		'^.+\\.(ts|js)$': 'ts-jest'
+		'^.+\\.(ts|js)$': [require.resolve('jest-chain-transform'),
+			{ transformers: ['../../../src/importMetaTransformer.cjs', 'ts-jest'] }
+		]
 	},
 	moduleFileExtensions: ['js', 'ts', 'svelte'],
 	setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],

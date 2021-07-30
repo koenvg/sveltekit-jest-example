@@ -1,5 +1,7 @@
 const { pathsToModuleNameMapper } = require('ts-jest/utils');
 const { compilerOptions } = require('./tsconfig.json');
+const sveltePreprocess = require("svelte-preprocess");
+
 module.exports = {
 	transform: {
 		'^.+\\.svelte$': [

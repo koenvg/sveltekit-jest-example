@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import Index from '$/routes/index.svelte';
 import { render } from '@testing-library/svelte';
 
